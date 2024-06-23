@@ -41,6 +41,12 @@ dependencies:
   get: ^4.6.6
   provider: ^6.1.2
   flutter_animate: ^4.5.0
+  pie_chart: ^5.4.0
+  fl_chart: ^0.68.0
+  image_picker: ^1.1.1
+  file_picker: ^8.0.3
+  curved_navigation_bar: ^1.0.3
+  table_calendar: ^3.1.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +76,7 @@ flutter:
     - assets/images/landing_screen_middle_vector_1.png
     - assets/images/landing_screen_middle_vector_2.png
     - assets/images/user_pic.jpg
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -93,6 +100,6 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
