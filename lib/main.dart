@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:front_end/providers/employee_provider.dart';
 import 'package:front_end/providers/theme_provider.dart';
+import 'package:front_end/screen/AddEmoloyee.dart';
+import 'package:front_end/screen/ProfilePage.dart';
 import 'package:front_end/screen/landing_screen.dart';
 import '/screen/home_screen.dart';
 import 'package:get/get.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
           title: 'Employees Scoring',
           theme: themeData(context),
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
+          home: AddEmployee(),
           routes: {
             HomeScreen.routeName: (ctx) => HomeScreen(),
           },
