@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:front_end/View/HomePage2.dart';
+import 'package:front_end/View/LoginPage.dart';
+import 'package:front_end/View/LoginPage2.dart';
 import 'package:front_end/model/employee.dart';
 import 'package:front_end/providers/employee_provider.dart';
 import 'package:front_end/providers/theme_provider.dart';
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
           title: 'Employees Scoring',
           theme: themeData(context),
           debugShowCheckedModeBanner: false,
-          home: LeaderBoardPage(),
+          home: LandingScreen(),
           // initialRoute: '/leaderboard',
 
           getPages: [

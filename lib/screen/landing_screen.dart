@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:front_end/View/LoginPage.dart';
+import 'package:front_end/View/LoginPage2.dart';
 import 'package:front_end/providers/theme_provider.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -21,7 +24,18 @@ class LandingScreen extends StatelessWidget {
         ),
         actions: [
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // Get.dialog(
+                //   barrierDismissible: true,
+                //   Login());
+                showDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  builder: (BuildContext context) {
+                    return const Login();
+                  },
+                );
+              },
               style: const ButtonStyle(
                   elevation: MaterialStatePropertyAll(0.0),
                   surfaceTintColor:
@@ -98,7 +112,9 @@ class LandingScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w600)),
                             ))
                         .animate()
-                        .fadeIn(duration: 2.seconds, curve: Curves.easeInOut)
+                        .fadeIn(
+                            duration: NumDurationExtensions(2).seconds,
+                            curve: Curves.easeInOut)
                         .moveY(curve: Curves.fastEaseInToSlowEaseOut))
               ],
             )),
@@ -106,7 +122,9 @@ class LandingScreen extends StatelessWidget {
               Image.asset("assets/images/landing_screen_middle_vector_2.png")
                   .animate(
                       onPlay: (controller) => controller.repeat(reverse: true))
-                  .moveY(duration: 2.seconds, curve: Curves.easeInOut)
+                  .moveY(
+                      duration: NumDurationExtensions(2).seconds,
+                      curve: Curves.easeInOut)
           ],
         ),
       ),
